@@ -1,20 +1,20 @@
-import React from "react";
-import { Button, Form, Input } from "antd";
-import { useNavigate } from "react-router-dom";
-import "./LogIn.css";
+import React from 'react';
+import { Button, Form, Input } from 'antd';
+import { useNavigate } from 'react-router-dom';
+import './LogIn.css';
 
 const onFinishFailed = (errorInfo) => {
-  console.log("Failed:", errorInfo);
+  console.log('Failed:', errorInfo);
 };
 
 const LogIn = () => {
   const navigate = useNavigate();
   const onFinish = (values) => {
-    if (values.username === "user" && values.password === "1234") {
-      console.log("Success:", values);
+    if (values.username === 'user' && values.password === '1234') {
+      console.log('Success:', values);
       navigate(`/main`);
     } else {
-      console.log("wrong:", values);
+      console.log('wrong:', values);
     }
   };
 
@@ -33,7 +33,7 @@ const LogIn = () => {
         <Form.Item
           label="Username"
           name="username"
-          rules={[{ required: true, message: "Please input your username!" }]}
+          rules={[{ required: true, message: 'Please input your username!' }]}
         >
           <Input />
         </Form.Item>
@@ -41,7 +41,7 @@ const LogIn = () => {
         <Form.Item
           label="Password"
           name="password"
-          rules={[{ required: true, message: "Please input your password!" }]}
+          rules={[{ required: true, message: 'Please input your password!' }]}
         >
           <Input.Password />
         </Form.Item>
